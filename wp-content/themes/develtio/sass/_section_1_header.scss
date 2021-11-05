@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.header-section{
+    padding-top:114px;
+    .container-header{
+            max-width: 1920px;
+            min-width:100px;
+            height:732px;
+            background-position: center;
+            position:relative;
+            .left-h-p{
+                width:100%; 
+                height:100%; 
+                max-height:604px;
+                h1{
+                    font-size:52px;
+                    line-height: 56px;
+                    color: $color-main-orange-1;
+                    font-weight: bold;
+                    word-wrap: break-word;
+                }
+                p{
+                    font-size:30px;
+                    line-height:36px;
+                    color:white;
+                    margin-right:180px;
+                    font-weight: bold;
+                }
+                @media (max-width:500px){
+                    h1{
+                        font-size:40px;
+                    }
+                    p{
+                        font-size:20px;
+                    }
+                }
+                @media screen and (max-width:1200px) {
+                    p{
+                        margin:0;
+                    }
+                }
+            }
+            .col-form{
+                border-radius:10px;
+                padding:60px;
+                width:100%; 
+                max-height:604px;
+             
+                p:first-child{ 
+                    font-size:24px;
+                    font-weight: bold;
+                    line-height: 26px;
+                    color:$color-main-blue-2;
+                }
+                .wpcf7-form{
+                    .wpcf7-list-item {
+                        margin:0;
+                        label{
+                            display: flex;
+                            input{
+                                width:17%;
+                                margin-top:5px;
+                            }
+                        }
+                    }
+                    p{
+                        span{
+                            input{
+                                width:100%;
+                                padding:10px;
+                                margin-bottom: 10px;
+                            }
+                        }
+                        .miejscowosc{
+                            input{
+                                width:57%;
+                            }
+                        }
+                        .kodpoczotwy{
+                            input{
+                                width:39%;
+                                float:right;
+                            }
+                        }
+                        .wpcf7-submit{
+                            width:205px;
+                            display: flex;
+                            justify-content: center;
+                            margin: auto;
+                            font-size:17px;
+                            background-color:#FE7A22;
+                            border-radius:10px;
+                            border:0;
+                            color:white;
+                            line-height:48px;
+                        }
+                    }
+                }
+            }
+            @media screen and (max-width:1200px) {
+                .col-form{
+                    padding:0;
+                }
+            }
+            .image-overlay{
+                height: 259px;
+                width:100%;
+                background-color:#1C3E95;
+                position: absolute;
+                bottom:0;
+                opacity:0.75;
+                z-index:-1;
+            }
+            @media screen and(max-width:992px) {
+                .image-overlay{
+                   height:50%;
+                }
+            }
+            .container{
+                max-width: 1200px;
+                height:100%;
+                .row{
+                    height:100%;
+                }
+            }
+    }
+
+}
+.wpcf7 form.invalid .wpcf7-response-output, .wpcf7 form.unaccepted .wpcf7-response-output, .wpcf7 form.payment-required .wpcf7-response-output {
+    border-color: red;
+    background-color: white;
+}

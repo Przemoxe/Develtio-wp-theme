@@ -1,0 +1,66 @@
+-Zaprojektowałem RWD
+-Pociąłem projekt na dwie sekcje + header + footer = 4
+-Projekt wdrożyłem w szablon
+
+Dodaktowe pytania/odpowiedzi:
+1.Z jakiego rozwiązania najlepiej skorzystać w WordPress do wdrożenia formularza kontaktowego?
+    -Contact Form 7 ew. napisać samemu + ajax wraz zabezpieczeniem przed błędnym wysłaniem email
+
+2.Załóżmy, że klient chciałby mieć na swojej stronie opartej o WordPress możliwość edycji szeregu informacji, w różnych miejscach tej strony i jednocześnie nie znałby w żadnym stopniu HTML. Na czym najlepiej oprzeć budowaną stronę aby dać klientowi swobodę zmian treści? Jakie rozwiązanie pozwoli zbudować łatwe w obsłudze panele zarządzania treścią?
+    -Najlepiej użyć najbardziej powszchnego pluginu ACF Pro i zrobić bloki w gutenbergu, można również stworzyć swoje własne bloki ale to dużo więcej pracy, a ACF to zapewnia
+
+3.WordPress pozwala na definiowanie menu bezpośrednio w panelu administratora. Jakiego kodu należu użyć aby wykorzystać takie menu w swoim szablonie?
+    -wycinek kodu z jednego z moich projektów:
+
+        add_action('after_setup_theme', array($this, 'menu_register'));
+          function menu_register(){
+            register_nav_menu('headerMenuLocation', 'Header Menu Location');
+            register_nav_menu('footerMenuLocation', 'Footer Menu Location');
+        }
+
+                      wp_nav_menu(array(
+                    'theme_location' => 'headerMenuLocation',
+                    'container' => '',
+                ));
+
+        //a tu prosto z www: wp_get_nav_menu_items( int|string|WP_Term $menu, array $args = array() )
+
+4.Ile zajęło Ci wdrożenie tego projektu? Podaj prawdziwą wartość, jesteśmy programistami, wiemy ile to może potencjalnie zająć, wiemy, że czasami można się na czymś zablokować, pisz szczerze :)
+
+Wybrana technologia:
+-HTML
+-SCSS
+-Bootstrap
+-JavaScript
+-php
+-GULP
+-Wordpress(wymagane wtyczki):
+    --ACF Pro
+    --ContactForm7
+
+[text imienazwisko placeholder "Imię i nazwisko"]
+[email* your-email placeholder "Adres e-mail"]
+[tel tel-741 placeholder "Nr telefonu"]
+[text miejscowosc placeholder "Miejscowość"][text kodpoczotwy placeholder "Kod pocztowy"]
+[acceptance acceptance-145 optional]
+ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, [/acceptance]
+
+
+[submit "Wyślij"]
+
+
+
+Powyższy kod należy wrzucić do wtyczki contact_form_7 w sekcji "Formularz"
+
+
+wywołanie contact_form_7 znajduje się w template-parts/blocks/section_2_about.php
+
+ <?php echo do_shortcode('[contact-form-7 id="15" title="Form-2" html_id="contact-form-1234" html_class="form contact-form"]'); ?>
+
+ Należy zmienić na własny
+
+
+
+
+
+Na projekt poświęcone = 14,5h 

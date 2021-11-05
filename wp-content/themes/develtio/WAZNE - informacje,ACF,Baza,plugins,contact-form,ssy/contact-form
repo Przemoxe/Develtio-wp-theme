@@ -1,0 +1,20 @@
+[text imienazwisko placeholder "Imię i nazwisko"]
+[email* your-email placeholder "Adres e-mail"]
+[tel tel-741 placeholder "Nr telefonu"]
+[text miejscowosc placeholder "Miejscowość"][text kodpoczotwy placeholder "Kod pocztowy"]
+[acceptance acceptance-145 optional]
+ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, [/acceptance]
+
+
+[submit "Wyślij"]
+
+
+
+Powyższy kod należy wrzucić do wtyczki contact_form_7 w sekcji "Formularz"
+
+
+wywołanie contact_form_7 znajduje się w template-parts/blocks/section_2_about.php
+
+ <?php echo do_shortcode('[contact-form-7 id="15" title="Form-2" html_id="contact-form-1234" html_class="form contact-form"]'); ?>
+
+ Należy zmienić na własny

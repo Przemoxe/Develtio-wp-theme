@@ -1,0 +1,27 @@
+.footer-section{
+    .container-footer{
+        max-width: 1920px;
+        min-width:100px;
+        background-color:$color-main-blue-2;
+        .container{
+            max-width: 1200px;
+            padding-top:59px;
+            padding-bottom:89px;
+            .active{
+                color:$color-main-orange-1;
+            }
+            a{
+                text-decoration: none;
+                color:$color-main-orange-1;
+                font-size:25px;
+                font-weight:bold;
+                font-family: Lato;
+            }
+            h5{
+                font-size:20px;
+                font-family: Quicksand;
+                font-weight: bold;
+            }
+        }
+    }
+}
