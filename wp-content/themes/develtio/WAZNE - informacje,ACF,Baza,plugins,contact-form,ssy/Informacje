@@ -1,4 +1,6 @@
 -Zaprojektowałem RWD
+-Customizer
+-ACF blocks
 -Pociąłem projekt na dwie sekcje + header + footer = 4
 -Projekt wdrożyłem w szablon
 
@@ -25,6 +27,8 @@ Dodaktowe pytania/odpowiedzi:
 
         //a tu prosto z www: wp_get_nav_menu_items( int|string|WP_Term $menu, array $args = array() )
 
+Menu można poprzeglądać w innych projektach, tutaj nie robiłem skoro nie ma potrzeby.
+
 4.Ile zajęło Ci wdrożenie tego projektu? Podaj prawdziwą wartość, jesteśmy programistami, wiemy ile to może potencjalnie zająć, wiemy, że czasami można się na czymś zablokować, pisz szczerze :)
 
 Wybrana technologia:
@@ -37,6 +41,8 @@ Wybrana technologia:
 -Wordpress(wymagane wtyczki):
     --ACF Pro
     --ContactForm7
+
+    
 
 [text imienazwisko placeholder "Imię i nazwisko"]
 [email* your-email placeholder "Adres e-mail"]
